@@ -22,8 +22,9 @@ const spotify = new Spotify({
     redirectUri: 'http://localhost:5000/spotify'
 });
 
-const START_DATE = moment().add({ months: config.START_MONTH_OFFSET, days: config.START_DAY_OFFSET }).format('YYYY-MM-DD');
-const END_DATE = moment().add({ months: config.START_MONTH_OFFSET + config.END_MONTH_OFFSET, days: config.START_DAY_OFFSET + config.END_DAY_OFFSET }).format('YYYY-MM-DD');
+const START_DATE = config.START_DATE || moment().add({ months: config.START_MONTH_OFFSET, days: config.START_DAY_OFFSET }).format('YYYY-MM-DD');
+const END_DATE = config.END_DATE || moment().add({ months: config.START_MONTH_OFFSET + config.END_MONTH_OFFSET, days: config.START_DAY_OFFSET + config.END_DAY_OFFSET }).format('YYYY-MM-DD');
+
 
 //https://api.songkick.com/api/3.0/search/locations.json?query=SF%20Bay%20Area&apikey=hHSjLHKTmsfByvxU
 //SF Bay Area Location ID: 26330

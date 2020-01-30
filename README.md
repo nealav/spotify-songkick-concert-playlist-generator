@@ -16,7 +16,9 @@ module.exports = {
     START_DAY_OFFSET: 7,
     START_MONTH_OFFSET: 0,
     END_DAY_OFFSET: 14,
-    END_MONTH_OFFSET: 0
+    END_MONTH_OFFSET: 0,
+    START_DATE: '2020-02-21',
+    END_DATE: '2020-02-28'
 };
 ```
 
