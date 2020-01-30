@@ -4,6 +4,8 @@ Spotify-Songkick integration to match upcoming concerts to playlists with music 
 
 # Setup
 
+`npm install`
+
 Create a config.js file in the root with
 
 ```

@@ -145,7 +145,7 @@ const buildPlaylist = async (artistNames) => {
         await delay(Math.random() * (101 - 50) + 50);
         const topTenTracks = await spotify.getArtistTopTracks(artist.id, 'US');
         const track = topTenTracks.body.tracks[0];
-        if (track.uri) {
+        if (track && track.uri) {
             console.log(`${artist.name} => ${track.uri}`);
             songs.push({
                 uri: track.uri,
